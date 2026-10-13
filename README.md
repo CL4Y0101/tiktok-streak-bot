@@ -58,3 +58,7 @@ Contoh cron (2x sehari):
   dan selesaikan manual.
 - Selector DOM TikTok bisa berubah; kalau tombol tidak ketemu, buka dengan
   `--headed` dan sesuaikan selector di `bot.js` (`openChat` / `sendText`).
+
+## Diagram workflow
+
+![workflow](docs/workflow.png)
