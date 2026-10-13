@@ -62,3 +62,7 @@ Contoh cron (2x sehari):
 ## Diagram workflow
 
 ![workflow](docs/workflow.png)
+
+---
+
+Dibuat oleh **Aditya Fadni Athaullah**
