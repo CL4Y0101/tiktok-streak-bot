@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1420" viewBox="0 0 1000 1420">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#8b8b96"/>
+    </marker>
+    <style>
+      .box { fill:#1a1a22; stroke:#6366f1; stroke-width:2; rx:12; }
+      .dia { fill:#12201e; stroke:#2dd4bf; stroke-width:2; }
+      .term { fill:#12201e; stroke:#2dd4bf; stroke-width:2.5; rx:32; }
+      .t { fill:#e8e8ec; font-family:sans-serif; font-size:20px; text-anchor:middle; }
+      .ts { fill:#a7a7b3; font-family:sans-serif; font-size:16px; text-anchor:middle; }
+      .lbl { fill:#8b8b96; font-family:sans-serif; font-size:15px; }
+      .title { fill:#f4f4f6; font-family:sans-serif; font-size:32px; font-weight:bold; text-anchor:middle; }
+      .sub { fill:#8b8b96; font-family:sans-serif; font-size:18px; text-anchor:middle; }
+      .ln { stroke:#8b8b96; stroke-width:2; fill:none; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1420" fill="#101014"/>
+  <text x="500" y="58" class="title">tiktok-streak-bot</text>
+  <text x="500" y="88" class="sub">Workflow otomatisasi pesan jaga streak TikTok</text>
+
+  <!-- START -->
+  <rect x="200" y="120" width="360" height="60" class="term"/>
+  <text x="380" y="157" class="t">Mulai: cron 2x sehari</text>
+  <line x1="380" y1="180" x2="380" y2="208" class="ln" marker-end="url(#arr)"/>
+
+  <!-- launch -->
+  <rect x="200" y="208" width="360" height="64" class="box" rx="12"/>
+  <text x="380" y="235" class="t">Launch Chromium</text>
+  <text x="380" y="259" class="ts">profil persisten .profile/</text>
+  <line x1="380" y1="272" x2="380" y2="300" class="ln" marker-end="url(#arr)"/>
+
+  <!-- diamond login -->
+  <polygon points="380,300 500,360 380,420 260,360" class="dia"/>
+  <text x="380" y="355" class="t">Sesi login</text>
+  <text x="380" y="379" class="t">valid?</text>
+  <text x="405" y="412" class="lbl">Ya</text>
+  <line x1="380" y1="420" x2="380" y2="448" class="ln" marker-end="url(#arr)"/>
+  <text x="528" y="352" class="lbl">Tidak</text>
+  <line x1="500" y1="360" x2="620" y2="360" class="ln" marker-end="url(#arr)"/>
+  <rect x="620" y="328" width="330" height="64" class="box" rx="12"/>
+  <text x="785" y="355" class="t">npm run login</text>
+  <text x="785" y="379" class="ts">login manual sekali</text>
+
+  <!-- loop targets -->
+  <rect x="200" y="448" width="360" height="64" class="box" rx="12"/>
+  <text x="380" y="475" class="t">Untuk tiap target</text>
+  <text x="380" y="499" class="ts">config.js: 4 username</text>
+  <line x1="380" y1="512" x2="380" y2="540" class="ln" marker-end="url(#arr)"/>
+
+  <!-- open chat -->
+  <rect x="200" y="540" width="360" height="64" class="box" rx="12"/>
+  <text x="380" y="567" class="t">Buka profil lalu klik</text>
+  <text x="380" y="591" class="ts">tombol Message</text>
+  <line x1="380" y1="604" x2="380" y2="632" class="ln" marker-end="url(#arr)"/>
+
+  <!-- LLM -->
+  <rect x="200" y="632" width="360" height="64" class="box" rx="12"/>
+  <text x="380" y="659" class="t">LLM buatkan pesan</text>
+  <text x="380" y="683" class="ts">9Router / OpenAI-compatible</text>
+  <line x1="380" y1="696" x2="380" y2="724" class="ln" marker-end="url(#arr)"/>
+
+  <!-- diamond llm ok -->
+  <polygon points="380,724 500,784 380,844 260,784" class="dia"/>
+  <text x="380" y="779" class="t">LLM</text>
+  <text x="380" y="803" class="t">berhasil?</text>
+  <text x="405" y="836" class="lbl">Ya</text>
+  <line x1="380" y1="844" x2="380" y2="872" class="ln" marker-end="url(#arr)"/>
+  <text x="528" y="776" class="lbl">Tidak</text>
+  <line x1="500" y1="784" x2="620" y2="784" class="ln" marker-end="url(#arr)"/>
+  <rect x="620" y="752" width="330" height="64" class="box" rx="12"/>
+  <text x="785" y="779" class="t">Template fallback</text>
+  <text x="785" y="803" class="ts">config.js</text>
+  <line x1="785" y1="816" x2="785" y2="904" class="ln"/>
+  <line x1="785" y1="904" x2="568" y2="904" class="ln" marker-end="url(#arr)"/>
+
+  <!-- send -->
+  <rect x="200" y="872" width="360" height="64" class="box" rx="12"/>
+  <text x="380" y="899" class="t">Ketik pesan lalu Enter</text>
+  <text x="380" y="923" class="ts">delay ketikan manusiawi</text>
+  <line x1="380" y1="936" x2="380" y2="964" class="ln" marker-end="url(#arr)"/>
+
+  <!-- diamond syaa -->
+  <polygon points="380,964 500,1024 380,1084 260,1024" class="dia"/>
+  <text x="380" y="1019" class="t">target =</text>
+  <text x="380" y="1043" class="t">syaa115275?</text>
+  <text x="405" y="1076" class="lbl">Tidak</text>
+  <line x1="380" y1="1084" x2="380" y2="1112" class="ln" marker-end="url(#arr)"/>
+  <text x="528" y="1016" class="lbl">Ya</text>
+  <line x1="500" y1="1024" x2="620" y2="1024" class="ln" marker-end="url(#arr)"/>
+  <rect x="620" y="992" width="330" height="64" class="box" rx="12"/>
+  <text x="785" y="1019" class="t">Baca caption video</text>
+  <text x="785" y="1043" class="ts">terbaru di chat</text>
+  <line x1="785" y1="1056" x2="785" y2="1084" class="ln" marker-end="url(#arr)"/>
+  <rect x="620" y="1084" width="330" height="64" class="box" rx="12"/>
+  <text x="785" y="1111" class="t">LLM buatkan reaksi</text>
+  <text x="785" y="1135" class="ts">kirim sebagai balasan</text>
+  <line x1="620" y1="1116" x2="560" y2="1116" class="ln" marker-end="url(#arr)"/>
+
+  <!-- delay -->
+  <rect x="200" y="1112" width="360" height="64" class="box" rx="12"/>
+  <text x="380" y="1139" class="t">Jeda acak 4-9 detik</text>
+  <text x="380" y="1163" class="ts">lanjut target berikutnya</text>
+  <line x1="380" y1="1176" x2="380" y2="1204" class="ln" marker-end="url(#arr)"/>
+
+  <!-- log -->
+  <rect x="200" y="1204" width="360" height="60" class="box" rx="12"/>
+  <text x="380" y="1241" class="t">Catat ke bot.log</text>
+  <line x1="380" y1="1264" x2="380" y2="1292" class="ln" marker-end="url(#arr)"/>
+
+  <!-- END -->
+  <rect x="200" y="1292" width="360" height="60" class="term"/>
+  <text x="380" y="1329" class="t">Selesai</text>
+
+  <text x="500" y="1395" class="sub">CAPTCHA terdeteksi: jalankan dengan --headed lalu selesaikan manual</text>
+</svg>
