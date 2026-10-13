@@ -1,0 +1,1 @@
+{"dependencies":{"openai":"^4.104.0","playwright":"^1.55.0"},"description":"Semi-otomatis kirim pesan jaga streak TikTok (Playwright + LLM)","name":"tiktok-streak-bot","private":true,"scripts":{"dry":"node bot.js --dry-run","headed":"node bot.js --headed","login":"node bot.js --login","send":"node bot.js"},"version":"0.1.0"}
